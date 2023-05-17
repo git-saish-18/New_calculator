@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calcii.css" />
+  </head>
+  <body>
+    <center><h1 style="color: red">Calculator</h1></center>
+    <center>
+      <form
+        action=""
+        name="form1"
+        style="border: 2px black solid; width: 400px; padding: 1rem"
+        onsubmit=" return false"
+      >
+        <label for="">
+          Enter the 1st value
+          <input
+            type="text"
+            name="text1"
+            id="text1"
+            required
+            onchange="check()"
+          />
+        </label>
+        <br />
+        <br />
+        <label for="">
+          Enter the 2nd value
+          <input
+            type="text"
+            name="text2"
+            id="text2"
+            required
+            onchange="check()"
+          />
+        </label>
+        <br />
+        <br />
+        <label for="">
+          Result &nbsp;&nbsp;&nbsp;
+          <input type="number" name="text3" id="result" readonly />
+        </label>
+        <br />
+        <br />
+        <div style="text-align: left; margin-left: 4rem" id="methods">
+          <label for="Add"
+            ><input type="radio" name="group" id="Add" value="Add" class="checked" />Addition</label
+          >
+          <br />
+          <label for="Sub">
+            <input type="radio" name="group" id="Sub" value="Sub" class="checked" />Subtraction
+          </label>
+          <br />
+          <label for="Mul">
+            <input type="radio" name="group" id="Mul" value="Mul" class="checked" />Multiplication
+          </label>
+          <br />
+          <label for="Div">
+            <input type="radio" name="group" id="Div" value="Div" class="checked" />Division
+          </label>
+          <br />
+        </div>
+        <input type="reset" value="Clear" id="btn" />
+        <input type="submit" value="calculate" onclick="calculate()" id="btn" />
+      </form>
+    </center>
+    <script src="calci.js"></script>
+  </body>
+</html>
